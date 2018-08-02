@@ -22,8 +22,16 @@
     </div>
   </div>
 
-  <div class="footer-wrapper bg-black">
-    <footer class="footer max-w-4xl mx-auto py-8 px-4 text-white">
+  <div class="footer-nav-wrapper bg-black">
+    <footer class="max-w-4xl mx-auto py-8 px-4 text-white">
+      {{ block "footernav" . }}
+        {{ partial "3_organisms/footer-nav.html" . }}
+      {{ end }}
+    </footer>
+  </div>
+
+  <div class="footer-wrapper bg-l-full-black">
+    <footer class="max-w-4xl mx-auto py-8 px-4 text-white">
       {{ block "footer" . }}
         {{ partial "3_organisms/footer.html" . }}
       {{ end }}

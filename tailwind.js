@@ -47,11 +47,12 @@ let colors = {
   // Linode Colors
   'l-green': '#1AB15C',
   'l-nav-grey': '#a6a6a6',
+  'l-full-black': '#000',
 
   // Standard Colors
   'transparent': 'transparent',
 
-  'black': '#22292f',
+  'black': '#161616',
   'light-black': '#323232',
   'grey-darkest': '#3d4852',
   'grey-darker': '#606f7b',
@@ -173,6 +174,7 @@ module.exports = {
   */
 
   screens: {
+    'xs': '400px',
     'sm': '576px',
     'md': '768px',
     'lg': '992px',
