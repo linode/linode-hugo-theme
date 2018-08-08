@@ -74,6 +74,7 @@ code {
 a {
   @apply text-l-green;
   text-decoration: none;
+  transition: color 225ms ease-in-out;
 }
 
 a:hover,
