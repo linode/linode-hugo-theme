@@ -40,7 +40,7 @@
   @apply bg-light-black;
   position: fixed;
   right: calc(-1 * var(--mobile-menu-width));
-  top: 0;
+  top: -2px;
   display: flex;
   flex-direction: column;
   width: var(--mobile-menu-width);
@@ -61,6 +61,7 @@
     box-shadow: none;
     text-align: initial;
     height: auto;
+    overflow-y: initial;
     right: 0;
   }
 
