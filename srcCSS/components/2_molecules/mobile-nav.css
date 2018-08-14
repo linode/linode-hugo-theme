@@ -1,7 +1,7 @@
 .menu-icon {
   position: relative;
   display: block;
-  right: 1rem;
+  right: 0rem;
   transition: background-color .7s ease, transform .7s ease;
   z-index: 101;
 }
