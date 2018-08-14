@@ -15,6 +15,7 @@
   padding: 5px 5px 5px 30px;
   cursor: pointer;
   transition: color 225ms ease-in-out;
+  z-index: 2;
 }
 
 .radio-label:hover + .check {
@@ -30,7 +31,7 @@
   width: 22px;
   top: 5px;
   left: 0px;
-	z-index: 5;
+	z-index: 1;
 	transition: border 225ms ease-in-out;
 }
 

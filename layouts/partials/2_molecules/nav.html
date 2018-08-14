@@ -1,4 +1,7 @@
 {{ $url := .URL }}
+{{ $currentTag := index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0 }}
+{{ $firstUrlElement := index (split .URL "/") 1 }}
+
 {{ range .Site.Menus.main }}
-  <a href="{{ .URL }}" class="main-nav-link text-l-nav-grey hover:text-white relative {{ if eq $url .URL }}active{{ end }}" role="menuitem">{{ .Name }}</a>
+  <a href="{{ .URL }}" class="main-nav-link text-l-nav-grey hover:text-white relative {{ if in .URL $firstUrlElement }}active{{ end }}" role="menuitem">{{ .Name }}</a>
 {{ end }}

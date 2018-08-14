@@ -14,7 +14,7 @@
     </div>
 
     {{ block "banner" . }}
-      {{ partial "3_organisms/banner.html" . }}
+      {{ partial "3_organisms/banner.html" (dict "Title" .Title "Subtitle" .Params.subtitle) . }}
     {{ end }}
 
     <div class="main-wrapper max-w-3xl mx-auto p-2">
