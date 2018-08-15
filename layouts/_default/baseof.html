@@ -6,7 +6,7 @@
 
   <div class="content">
     <div class="header-wrapper bg-light-black">
-      <header class="header max-w-3xl mx-auto p-2 flex flex-wrap items-center justify-between">
+      <header class="header max-w-3xl mx-auto py-2 px-4 md:px-8 flex flex-wrap items-center justify-between">
         {{ block "header" . }}
           {{ partial "3_organisms/header.html" . }}
         {{ end }}
@@ -14,10 +14,10 @@
     </div>
 
     {{ block "banner" . }}
-      {{ partial "3_organisms/banner.html" . }}
+      {{ partial "3_organisms/banner.html" (dict "Title" .Title "Subtitle" .Params.subtitle) . }}
     {{ end }}
 
-    <div class="main-wrapper max-w-3xl mx-auto p-2">
+    <div class="main-wrapper max-w-3xl mx-auto py-2 px-4 md:px-8">
       <main class="main">
         {{ block "main" . }}
           {{ partial "3_organisms/content.html" . }}
@@ -27,7 +27,7 @@
   </div>
 
   <div class="footer-nav-wrapper bg-black">
-    <footer class="max-w-3xl mx-auto py-8 px-2 text-white">
+    <footer class="max-w-3xl mx-auto py-8 px-4 md:px-8 text-white">
       {{ block "footernav" . }}
         {{ partial "3_organisms/footer-nav.html" . }}
       {{ end }}
@@ -35,7 +35,7 @@
   </div>
 
   <div class="footer-wrapper bg-l-full-black">
-    <footer class="max-w-3xl mx-auto py-8 px-2 text-white">
+    <footer class="max-w-3xl mx-auto py-8 px-4 md:px-8 text-white">
       {{ block "footer" . }}
         {{ partial "3_organisms/footer.html" . }}
       {{ end }}
