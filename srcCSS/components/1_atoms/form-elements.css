@@ -1,0 +1,20 @@
+[type="text"],
+[type="password"],
+.select-wrapper select {
+  width: 100%;
+  max-width: 415px;
+  background: transparent;
+  @apply border border-solid border-l-off-black p-2 rounded-none text-l-text;
+}
+
+.form-control {
+  @apply mt-4;
+}
+
+.form-actions {
+  @apply mt-8 text-center;
+}
+
+.input-caption {
+  @apply text-sm;
+}
