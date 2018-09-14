@@ -3,8 +3,8 @@ input {
 }
 
 :focus {
-  outline: 1px dotted #aaa;
-  box-shadow: 0;
+  outline: 1px dotted #999;
+  box-shadow: 0 0 2px 1px rgba(16,124,158,0.2);
 }
 
 [type="text"],
@@ -13,7 +13,15 @@ input {
   width: 100%;
   max-width: 415px;
   background: transparent;
+  transition: border-color 225ms ease-in-out;
   @apply border border-solid border-l-off-black p-2 rounded-none text-l-text;
+}
+
+[type="text"]:focus,
+[type="password"]:focus,
+.select-wrapper select:focus {
+  outline: 0;
+  border-color: #107C9E;
 }
 
 .form-control {
