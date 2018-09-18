@@ -1,0 +1,3 @@
+.footer-links a {
+  @apply .text-white;
+}

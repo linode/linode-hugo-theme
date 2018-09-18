@@ -1,0 +1,123 @@
+.menu-icon {
+  position: relative;
+  display: block;
+  right: 0rem;
+  transition: background-color .7s ease, transform .7s ease;
+  z-index: 101;
+}
+
+.menu-icon.open {
+  position: fixed;
+  right: 2rem;
+}
+
+.menu-icon.open .top {
+  transform: translateY(9px) rotateZ(45deg);
+}
+
+.menu-icon.open .bottom {
+  transform: translateY(-9px) rotateZ(-45deg);
+}
+
+.menu-icon.open .middle {
+  width: 0;
+}
+
+.menu-icon:hover .bar {
+  background-color: var(--l-green);
+}
+
+@screen md {
+  .menu-icon {
+    display: none;
+  }
+}
+
+.bar {
+  display: block;
+  height: 3px;
+  width: 30px;
+  background-color: #fff;
+  margin: 6px auto;
+  transition: transform .5s ease, width .5s ease;
+}
+
+.main-nav {
+  @apply bg-light-black;
+  position: fixed;
+  right: calc(-1 * var(--mobile-menu-width));
+  top: -2px;
+  width: var(--mobile-menu-width);
+  padding: 8rem 2rem 2rem 2rem;
+  height: 100%;
+  text-align: right;
+  overflow-y: auto;
+  transition: right .5s ease;
+  z-index: 100;
+}
+
+.main-nav-link {
+  display: inline-block;
+  float: right;
+  clear: both;
+  margin-bottom: 12px;
+}
+
+.main-nav-link::after {
+  bottom: -2px;
+  height: 2px;
+}
+@screen md {
+  .main-nav {
+    width: auto;
+    background: none;
+    position: relative;
+    display: block;
+    padding: 0;
+    box-shadow: none;
+    text-align: initial;
+    height: auto;
+    overflow-y: initial;
+    right: 0;
+  }
+
+  .main-nav-link {
+    @apply mx-2;
+    display: inline;
+    float: none;
+    margin-bottom: 0;
+  }
+
+  .main-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 0;
+    @apply bg-white;
+    transition: width 225ms ease-in-out;
+  }
+
+  .main-nav-link:hover,
+  .main-nav-link.active {
+    text-decoration: none;
+    @apply text-white;
+  }
+
+  .main-nav-link:hover::after,
+  .main-nav-link.active::after {
+    width: 100%;
+  }
+}
+
+.main-nav.open {
+  right: 0;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0 , .5);
+}
+
+:root {
+  --mobile-menu-width: 300px;
+}

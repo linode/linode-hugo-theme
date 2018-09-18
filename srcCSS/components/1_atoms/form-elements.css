@@ -1,0 +1,55 @@
+input {
+  box-shadow: 0;
+}
+
+:focus {
+  outline: 1px dotted #999;
+  box-shadow: 0 0 2px 1px rgba(16,124,158,0.2);
+}
+
+[type="text"],
+[type="password"],
+[type="email"],
+.select-wrapper select {
+  width: 100%;
+  max-width: 415px;
+  background: transparent;
+  transition: border-color 225ms ease-in-out;
+  @apply border border-solid border-l-off-black p-2 rounded-none text-l-text;
+}
+
+[type="text"]:focus,
+[type="password"]:focus,
+[type="email"]:focus,
+.select-wrapper select:focus {
+  outline: 0;
+  border-color: #107C9E;
+}
+
+.form-messages {
+  @apply my-6 p-1 pl-3 leading-tight font-bold text-l-text fade-in;
+}
+
+.form-errors {
+  @apply border-l-5 border-l-red;
+}
+
+.form-warnings {
+  @apply border-l-5 border-l-yellow;
+}
+
+.form-control {
+  @apply mt-4 relative;
+}
+
+label.error {
+  @apply text-sm text-l-red;
+}
+
+.form-actions {
+  @apply mt-8 text-center;
+}
+
+.input-caption {
+  @apply text-sm;
+}

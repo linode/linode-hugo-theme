@@ -1,0 +1,20 @@
+.footer-nav a {
+  @apply text-l-nav-grey;
+}
+
+.footer-nav-header a {
+  @apply text-white;
+}
+
+.footer-nav-social a {
+  display: inline-block;
+  width: 24px;
+  margin-right: .4em;
+  border: 1px solid currentColor;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+.footer-nav-social a:hover {
+  @apply text-white;
+}

@@ -1,4 +1,4 @@
-# Linode Hugo Base Theme
+# Linode Hugo Bade Theme
 
 Base theme for Hugo. Using PostCSS, TailwindCSS and gulp as a task manager.
 Lightweight, versatile and aimed to facilitate developmenmt by using utlility classes while remaining lean.
