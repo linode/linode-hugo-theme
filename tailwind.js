@@ -49,6 +49,12 @@ let colors = {
   'l-nav-grey': '#a6a6a6',
   'l-full-black': '#000',
   'l-text': '#333132',
+  'l-focus': '#107C9E',
+  'l-red': '#D41515',
+  'l-light-red': '#efdfde',
+  'l-grey': '#f4f4f4',
+  'l-off-white': '#fbfbfb',
+  'l-yellow': '#FFD006',
 
   // Standard Colors
   'transparent': 'transparent',
