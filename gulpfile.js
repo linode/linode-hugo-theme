@@ -63,7 +63,7 @@ gulp.task('compile', () => {
     .pipe(
       purgecss({
         content: [html],
-        whitelist: ['mobile-nav', 'active'],
+        whitelist: ['mobile-nav', 'active', 'error'],
         extractors: [
           {
             extractor: TailwindExtractor,
