@@ -15,7 +15,10 @@ input {
   max-width: 415px;
   background: transparent;
   transition: border-color 225ms ease-in-out;
-  @apply border border-solid border-l-off-black p-2 rounded-none text-l-text;
+  border: 1px solid #606469;
+  padding: .5rem;
+  border-radius: 0;
+  color: #333132;
 }
 
 [type="text"]:focus,
@@ -24,32 +27,4 @@ input {
 .select-wrapper select:focus {
   outline: 0;
   border-color: #107C9E;
-}
-
-.form-messages {
-  @apply my-6 p-1 pl-3 leading-tight font-bold text-l-text fade-in;
-}
-
-.form-errors {
-  @apply border-l-5 border-l-red;
-}
-
-.form-warnings {
-  @apply border-l-5 border-l-yellow;
-}
-
-.form-control {
-  @apply mt-4 relative;
-}
-
-label.error {
-  @apply text-sm text-l-red;
-}
-
-.form-actions {
-  @apply mt-8 text-center;
-}
-
-.input-caption {
-  @apply text-sm;
 }
