@@ -45,16 +45,18 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
   // Linode Colors
-  'l-green': '#1AB15C',
-  'l-nav-grey': '#a6a6a6',
-  'l-full-black': '#000',
-  'l-text': '#333132',
-  'l-focus': '#107C9E',
-  'l-red': '#D41515',
-  'l-light-red': '#efdfde',
-  'l-grey': '#f4f4f4',
-  'l-off-white': '#fbfbfb',
-  'l-yellow': '#FFD006',
+  'BaseGreen': '#1ab15c',
+  'BaseNavGrey': '#a6a6a6',
+  'BaseBlue': '#346c8a',
+  'BaseBlueLight': '#edf7fe',
+  'BaseBlueHover': '#4b81d5',
+  'BaseFullBlack': '#000',
+  'BaseText': '#333132',
+  'BaseRed': '#d41515',
+  'BaseLightRed': '#efdfde',
+  'BaseGrey': '#f4f4f4',
+  'BaseOffWhite': '#fbfbfb',
+  'BaseYellow': '#ffd006',
 
   // Standard Colors
   'transparent': 'transparent',
@@ -898,12 +900,12 @@ module.exports = {
   |
   */
 
-  plugins: [
-    require('tailwindcss/plugins/container')({
-      // center: true,
-      // padding: '1rem',
-    }),
-  ],
+  // plugins: [
+  //   require('tailwindcss/plugins/container')({
+  //     // center: true,
+  //     // padding: '1rem',
+  //   }),
+  // ],
 
 
   /*

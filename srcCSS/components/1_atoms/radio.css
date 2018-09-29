@@ -19,14 +19,14 @@
 }
 
 .radio-label:hover + .check {
-  @apply border-d-turq;
-  @apply bg-d-transparent-blue;
+  @apply border-BaseBlue;
+  @apply bg-BaseBlueLight;
 }
 
 .check {
   display: block;
   position: absolute;
-  @apply border-d-turq;
+  @apply border-BaseBlue;
   border-width: 1px;
   border-style: solid;
   border-radius: 100%;
@@ -53,13 +53,13 @@
 
 .radio:checked ~ .check,
 .radio:focus ~ .check {
-  @apply border-d-turq;
+  @apply border-BaseBlue;
   border-width: 1px;
   border-style: solid;
 }
 
 .radio:checked ~ .check::before {
-  @apply bg-d-turq;
+  @apply bg-BaseBlue;
 }
 
 input[type=radio]:checked ~ label {
