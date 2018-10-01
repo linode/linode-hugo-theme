@@ -45,16 +45,19 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
   // Linode Colors
-  'l-green': '#1AB15C',
-  'l-nav-grey': '#a6a6a6',
-  'l-full-black': '#000',
-  'l-text': '#333132',
-  'l-focus': '#107C9E',
-  'l-red': '#D41515',
-  'l-light-red': '#efdfde',
-  'l-grey': '#f4f4f4',
-  'l-off-white': '#fbfbfb',
-  'l-yellow': '#FFD006',
+  'BaseGreen': '#3f9c46',
+  'BaseGreenDark': '#446148',
+  'BaseNavGrey': '#a6a6a6',
+  'BaseBlue': '#107C9E',
+  'BaseBlueLight': '#5ea1b6;',
+  'BaseBlueFaded': 'rgba(220,231,232,0.7)',
+  'BaseBlackFull': '#000',
+  'BaseText': '#333132',
+  'BaseRed': '#d41515',
+  'BaseLightRed': '#efdfde',
+  'BaseGrey': '#f4f4f4',
+  'BaseOffWhite': '#fbfbfb',
+  'BaseYellow': '#ffd006',
 
   // Standard Colors
   'transparent': 'transparent',
@@ -898,12 +901,12 @@ module.exports = {
   |
   */
 
-  plugins: [
-    require('tailwindcss/plugins/container')({
-      // center: true,
-      // padding: '1rem',
-    }),
-  ],
+  // plugins: [
+  //   require('tailwindcss/plugins/container')({
+  //     // center: true,
+  //     // padding: '1rem',
+  //   }),
+  // ],
 
 
   /*
