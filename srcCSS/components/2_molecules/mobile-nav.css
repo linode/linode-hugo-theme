@@ -24,7 +24,7 @@
 }
 
 .menu-icon:hover .bar {
-  background-color: var(--l-green);
+  @apply bg-BaseGreen;
 }
 
 @screen md {

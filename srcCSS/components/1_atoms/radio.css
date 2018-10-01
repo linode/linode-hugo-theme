@@ -12,7 +12,7 @@
 .radio-label {
   display: block;
   position: relative;
-  padding: 5px 5px 5px 30px;
+  padding: 5px 5px 5px 25px;
   cursor: pointer;
   transition: color 225ms ease-in-out;
   z-index: 2;
@@ -20,7 +20,7 @@
 
 .radio-label:hover + .check {
   @apply border-BaseBlue;
-  @apply bg-BaseBlueLight;
+  @apply bg-BaseBlueFaded;
 }
 
 .check {
@@ -35,7 +35,8 @@
   top: 10px;
   left: 0px;
   z-index: 1;
-  transition: border 225ms ease-in-out;
+  transition: border 225ms ease-in-out,
+              background-color 225ms ease-in-out;
 }
 
 .check::before {

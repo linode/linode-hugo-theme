@@ -79,7 +79,7 @@ a {
 
 a:hover,
 a.active {
-  @apply text-BaseBlueHover underline;
+  @apply text-BaseBlueLight underline;
 }
 
 :root {

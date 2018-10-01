@@ -45,12 +45,13 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
   // Linode Colors
-  'BaseGreen': '#1ab15c',
+  'BaseGreen': '#3f9c46',
+  'BaseGreenDark': '#446148',
   'BaseNavGrey': '#a6a6a6',
-  'BaseBlue': '#346c8a',
-  'BaseBlueLight': '#edf7fe',
-  'BaseBlueHover': '#4b81d5',
-  'BaseFullBlack': '#000',
+  'BaseBlue': '#107C9E',
+  'BaseBlueLight': '#5ea1b6;',
+  'BaseBlueFaded': 'rgba(220,231,232,0.7)',
+  'BaseBlackFull': '#000',
   'BaseText': '#333132',
   'BaseRed': '#d41515',
   'BaseLightRed': '#efdfde',
