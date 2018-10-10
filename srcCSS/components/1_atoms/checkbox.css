@@ -20,6 +20,7 @@
   cursor: pointer;
   position: relative;
   z-index: 2;
+  top: 2px;
 }
 
 .checkbox-wrapper input[type=checkbox]:checked + .checkbox-check::after {

@@ -212,7 +212,7 @@ module.exports = {
 
   fonts: {
     'sans': [
-      'Lato',
+      'Source Sans Pro',
       'sans-serif',
     ],
     'serif': [
