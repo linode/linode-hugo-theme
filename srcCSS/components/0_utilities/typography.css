@@ -72,16 +72,14 @@ code {
 }
 
 a {
-  @apply text-l-green;
+  @apply text-BaseBlue;
   text-decoration: none;
   transition: color 225ms ease-in-out;
 }
 
 a:hover,
-a:visited,
-a:active,
 a.active {
-  text-decoration: underline;
+  @apply text-BaseBlueLight underline;
 }
 
 :root {

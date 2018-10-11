@@ -3,27 +3,28 @@ input {
 }
 
 :focus {
-  outline: 1px dotted #aaa;
-  box-shadow: 0;
+  outline: 1px dotted #999;
+  box-shadow: 0 0 2px 1px rgba(16,124,158,0.2);
 }
 
 [type="text"],
 [type="password"],
+[type="email"],
 .select-wrapper select {
   width: 100%;
   max-width: 415px;
   background: transparent;
-  @apply border border-solid border-l-off-black p-2 rounded-none text-l-text;
+  transition: border-color 225ms ease-in-out;
+  border: 1px solid #606469;
+  padding: .5rem;
+  border-radius: 0;
+  color: #333132;
 }
 
-.form-control {
-  @apply mt-4;
-}
-
-.form-actions {
-  @apply mt-8 text-center;
-}
-
-.input-caption {
-  @apply text-sm;
+[type="text"]:focus,
+[type="password"]:focus,
+[type="email"]:focus,
+.select-wrapper select:focus {
+  outline: 0;
+  border-color: #107C9E;
 }

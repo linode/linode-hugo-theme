@@ -1,5 +1,5 @@
 .footer-nav a {
-  @apply text-l-nav-grey;
+  @apply text-BaseNavGrey;
 }
 
 .footer-nav-header a {
