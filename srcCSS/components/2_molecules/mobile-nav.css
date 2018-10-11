@@ -46,7 +46,7 @@
   @apply bg-light-black;
   position: fixed;
   right: calc(-1 * var(--mobile-menu-width));
-  top: -2px;
+  top: 0;
   width: var(--mobile-menu-width);
   padding: 8rem 2rem 2rem 2rem;
   height: 100%;

@@ -12,10 +12,16 @@
 .radio-label {
   display: block;
   position: relative;
-  padding: 5px 5px 5px 25px;
+  padding: 5px 14px 5px 25px;
   cursor: pointer;
   transition: color 225ms ease-in-out;
   z-index: 2;
+}
+
+@screen md {
+  .radio-label {
+    padding: 5px 5px 5px 25px;
+  }
 }
 
 .radio-label:hover + .check {
