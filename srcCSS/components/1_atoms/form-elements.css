@@ -10,6 +10,7 @@ input {
 [type="text"],
 [type="password"],
 [type="email"],
+[type="number"],
 .select-wrapper select {
   width: 100%;
   max-width: 415px;
