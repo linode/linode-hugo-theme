@@ -34,7 +34,7 @@ const plugins = [
   cssnano({
     preset: ['default', {
       discardComments: {
-          removeAll: true,
+        removeAll: true,
       },
     }]
   })
@@ -82,7 +82,7 @@ gulp.task('size', () => {
     .pipe(postcss(plugins))
     .pipe(
       purgecss({
-        content: [baseThemeHtml, html],
+        content: [html],
         whitelist: ['mobile-nav', 'active'],
         extractors: [
           {

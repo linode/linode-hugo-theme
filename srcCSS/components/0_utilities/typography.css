@@ -82,13 +82,13 @@ a.active {
   @apply text-BaseBlueLight underline;
 }
 
-:root {
+:root,
+:host {
   --body-font-size: 1rem;
   --pre-font-size: .9rem;
   --line-height: 1.5;
   --heading-font-weight: 700;
   --heading-line-height: 1.25;
-  /* PLEASE USE A MODULAR SCALE SUCH AS: http://www.modularscale.com */
   --h1: 2.441rem;
   --h2: 1.953rem;
   --h3: 1.25rem;
@@ -99,4 +99,5 @@ a.active {
   --paragraph-margin-bottom: 0;
   --heading-margin-top: 1.5rem;
   --heading-margin-bottom: 0;
+  --mobile-menu-width: 300px;
 }
