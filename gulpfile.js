@@ -6,7 +6,6 @@ const atImport = require('postcss-easy-import');
 const purgecss = require('gulp-purgecss')
 const autoprefixer = require('autoprefixer');
 const cssInfo = require('gulp-css-info');
-const cssnano = require('cssnano');
 const stylelint = require('stylelint');
 const reporter = require('postcss-reporter');
 const size = require('gulp-size');
@@ -30,13 +29,6 @@ const plugins = [
   tailwindcss('./tailwind.js'),
   autoprefixer({
     browsers: ['last 2 versions', '> 2%']
-  }),
-  cssnano({
-    preset: ['default', {
-      discardComments: {
-          removeAll: true,
-      },
-    }]
   })
 ];
 
@@ -82,7 +74,7 @@ gulp.task('size', () => {
     .pipe(postcss(plugins))
     .pipe(
       purgecss({
-        content: [baseThemeHtml, html],
+        content: [html],
         whitelist: ['mobile-nav', 'active'],
         extractors: [
           {
