@@ -1,1 +1,5 @@
-<button class="btn"></button>
+{{ $normal := 'btn' }}
+{{ $small := 'btn btn-small' }}
+{{ $disabled := 'btn btn-disabled' }}
+
+<button class="{{ .$normal }}">{{ .Text }}</button>

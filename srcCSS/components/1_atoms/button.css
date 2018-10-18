@@ -22,8 +22,9 @@
   @apply text-black;
 }
 
-.btn.active {
-  @apply bg-BaseBlue;
-  @apply text-white;
-  text-decoration: none;
+.btn:disabled {
+  @apply bg-grey-light;
+  @apply border-grey-light;
+  transition-duration: 50ms;
+  cursor: not-allowed;
 }
