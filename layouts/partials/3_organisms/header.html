@@ -2,6 +2,12 @@
   <a href="/" class="flex items-center">{{ partial "1_atoms/logo.html" }}</a>
 </div>
 
+<a aria-label="mobile menu button" id="menu-icon" class="menu-icon" href="javascript:;" onClick="toggleNav()">
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
+</a>
+
 <nav
   id="main-menu"
   role="menu"
@@ -10,9 +16,3 @@
 >
   {{ partial "2_molecules/nav.html" . }}
 </nav>
-
-<a id="menu-icon" class="menu-icon" href="javascript:;" onClick="toggleNav()">
-  <span class="bar top"></span>
-  <span class="bar middle"></span>
-  <span class="bar bottom"></span>
-</a>
