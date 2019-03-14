@@ -3,16 +3,16 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  background-color: #E1E8EC;
+  border: 1px solid #606469;
 }
 
-.checkbox-wrapper input[type=checkbox] {
+.checkbox-wrapper input[type="checkbox"] {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -1px;
+  top: -1px;
   z-index: -1;
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  height: 20px;
 }
 
 .checkbox-label {
@@ -23,12 +23,12 @@
   top: 2px;
 }
 
-.checkbox-wrapper input[type=checkbox]:checked + .checkbox-check::after {
+.checkbox-wrapper input[type="checkbox"]:checked + .checkbox-check::after {
   opacity: 1;
 }
 
-.checkbox-wrapper input[type=checkbox]:focus + .checkbox-check {
-  outline: 1px dotted #aaa;
+.checkbox-wrapper input[type="checkbox"]:focus + .checkbox-check {
+  box-shadow: 0 0 2px 1px rgba(16, 124, 158, 0.2);
 }
 
 .checkbox-check {
@@ -41,11 +41,15 @@
 }
 
 .checkbox-check::after {
-  content: '';
+  content: "";
   display: block;
-  background: url("data:image/svg+xml;utf8,<svg width='15px' height='13px' viewBox='0 0 15 13' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'><g transform='translate(-3.000000, -4.000000)' fill-rule='nonzero' stroke='%23589A50' stroke-width='2'><g id='Checkbox'><polyline id='Path-2' points='4 10.8992892 8.48585263 15.13956 16.6614958 5'></polyline></g></g></g></svg>") no-repeat center center;
+  background: url("data:image/svg+xml;utf8,<svg width='15px' height='13px' viewBox='0 0 15 13' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'><g transform='translate(-3.000000, -4.000000)' fill-rule='nonzero' stroke='%23589A50' stroke-width='2'><g id='Checkbox'><polyline id='Path-2' points='4 10.8992892 8.48585263 15.13956 16.6614958 5'></polyline></g></g></g></svg>")
+    no-repeat center center;
   width: 20px;
   height: 20px;
   opacity: 0;
+  position: relative;
+  left: -1px;
+  top: -1px;
   transition: opacity 225ms ease-in-out;
 }
