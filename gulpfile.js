@@ -13,6 +13,7 @@ const notify = require('gulp-notify');
 
 const tailwind = 'tailwind.js';
 const mainCss = './srcCSS/main.css';
+const baseThemeHtml = '../linode-hugo-base-theme/layouts/**/*.html';
 const css = './srcCSS/**/*.css';
 const html = './layouts/**/*.html'
 const output = 'static/assets/css/';
