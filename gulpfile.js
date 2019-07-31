@@ -13,6 +13,7 @@ const notify = require('gulp-notify');
 
 const tailwind = 'tailwind.js';
 const mainCss = './srcCSS/main.css';
+const baseThemeHtml = '../linode-hugo-base-theme/layouts/**/*.html';
 const css = './srcCSS/**/*.css';
 const html = './layouts/**/*.html'
 const output = 'static/assets/css/';
@@ -92,16 +93,16 @@ gulp.task('size', () => {
 });
 
 gulp.task('watch:css', () => {
-  gulp.watch(css, ['compile']);
+  gulp.watch(css, gulp.series('compile'));
 });
 
 gulp.task('watch:html', () => {
-  gulp.watch(html, ['compile']);
+  gulp.watch(html, gulp.series('compile'));
 });
 
 gulp.task('watch:tailwind', () => {
-  gulp.watch(tailwind, ['compile']);
+  gulp.watch(tailwind, gulp.series('compile'));
 });
 
-gulp.task('default', ['lint', 'compile', 'size']);
-gulp.task('watch', ['compile', 'watch:css', 'watch:html', 'watch:tailwind']);
+gulp.task('default', gulp.series('lint', 'compile', 'size'));
+gulp.task('watch', gulp.series('compile', 'watch:css', 'watch:html', 'watch:tailwind'));
