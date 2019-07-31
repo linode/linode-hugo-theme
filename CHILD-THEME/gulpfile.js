@@ -5,7 +5,6 @@ const tailwindcss = require('tailwindcss');
 const atImport = require('postcss-easy-import');
 const purgecss = require('gulp-purgecss')
 const autoprefixer = require('autoprefixer');
-const cssInfo = require('gulp-css-info');
 const cssnano = require('cssnano');
 const stylelint = require('stylelint');
 const reporter = require('postcss-reporter');
@@ -16,7 +15,6 @@ const css = './srcCSS/**/*.css';
 const baseThemeHtml = '../linode-hugo-base-theme/layouts/**/*.html';
 const html = './layouts/**/*.html';
 const output = 'static/assets/css/';
-const cssInfoDir = 'static/assets/cssinfo/';
 
 class TailwindExtractor {
   static extract(content) {
@@ -42,13 +40,6 @@ gulp.task('lint', () => {
     ]));
 });
 
-gulp.task('cssInfo', () => {
-  return gulp.src(mainCss)
-    .pipe(postcss(plugins))
-    .pipe(cssInfo())
-    .pipe(gulp.dest(cssInfoDir))
-});
-
 gulp.task('compile', () => {
   return gulp.src(mainCss)
     .pipe(plumber())
@@ -69,16 +60,16 @@ gulp.task('compile', () => {
 });
 
 gulp.task('watch:css', () => {
-  gulp.watch(css, ['compile']);
+  gulp.watch(css, gulp.series('compile'));
 });
 
 gulp.task('watch:html', () => {
-  gulp.watch(html, ['compile']);
+  gulp.watch(html, gulp.series('compile'));
 });
 
 gulp.task('watch:tailwind', () => {
-  gulp.watch(tailwind, ['compile']);
+  gulp.watch(tailwind, gulp.series('compile'));
 });
 
-gulp.task('default', ['lint', 'compile', 'cssInfo']);
-gulp.task('watch', ['compile', 'watch:css', 'watch:html', 'watch:tailwind']);
+gulp.task('default', gulp.series('lint', 'compile'));
+gulp.task('watch', gulp.series('compile', 'watch:css', 'watch:html', 'watch:tailwind'));
