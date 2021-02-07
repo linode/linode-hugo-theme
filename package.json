@@ -20,5 +20,8 @@
         "stylelint": "^9.10.1",
         "stylelint-config-standard": "^18.3.0",
         "tailwindcss": "^0.5.3"
+    },
+    "resolutions":{
+        "minimist": "^1.2.4"
     }
 }
