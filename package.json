@@ -13,7 +13,7 @@
         "gulp-purgecss": "^1.2.0",
         "gulp-size": "^3.0.0",
         "gulp-watch": "^5.0.1",
-        "postcss": "^6.0.14",
+        "postcss": "^7.0.36",
         "postcss-easy-import": "^3.0.0",
         "postcss-reporter": "^5.0.0",
         "react-patterns": "^3.0.7",
