@@ -11,6 +11,7 @@ input {
 [type="password"],
 [type="email"],
 [type="number"],
+[type="tel"],
 .select-wrapper select {
   width: 100%;
   max-width: 415px;
@@ -25,6 +26,7 @@ input {
 [type="text"]:focus,
 [type="password"]:focus,
 [type="email"]:focus,
+[type="tel"]:focus,
 .select-wrapper select:focus {
   outline: 0;
   border-color: #107C9E;
